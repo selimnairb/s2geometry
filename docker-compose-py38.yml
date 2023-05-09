@@ -1,0 +1,11 @@
+services:
+  s2build-py38:
+    build:
+      context: .
+      dockerfile: Dockerfile-py38
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/s2geometry
