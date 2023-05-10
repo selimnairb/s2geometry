@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update
-RUN apt-get install -y git libssl-dev build-essential cmake swig python3-dev
+RUN apt-get install -y git libssl-dev build-essential cmake swig
 RUN pip install --upgrade pip
 RUN pip install cmake_build_extension wheel
 

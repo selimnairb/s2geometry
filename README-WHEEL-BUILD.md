@@ -5,7 +5,7 @@
 ### Build and run s2build container
 ```shell
 $ docker compose build s2build
-$ docker compose run s2build
+$ docker compose run --remove-orphans s2build
 ```
 
 ### Build s2geometry wheel in s2build container
@@ -22,7 +22,7 @@ which is a mount of the current directory of the host.
 ### Build and run s2build container
 ```shell
 $ docker compose -f docker-compose-py38.yml build s2build-py38
-$ docker compose -f docker-compose-py38.yml run s2build-py38
+$ docker compose -f docker-compose-py38.yml run --remove-orphans s2build-py38
 ```
 
 ### Build s2geometry wheel in s2build container
