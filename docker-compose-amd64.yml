@@ -1,0 +1,10 @@
+services:
+  s2build-amd64:
+    platform: "linux/amd64"
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/src/s2geometry

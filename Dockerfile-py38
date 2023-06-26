@@ -25,7 +25,7 @@ RUN cd /tmp && \
     cd abseil-cpp && \
     git checkout 20230125.3 && \
     mkdir build && \
-    cmake -S /tmp/abseil-cpp -B /tmp/abseil-cpp/build -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_PREFIX_PATH=/usr -DCMAKE_INSTALL_PREFIX=/usr -DABSL_ENABLE_INSTALL=ON -DABSL_USE_EXTERNAL_GOOGLETEST=ON -DABSL_FIND_GOOGLETEST=ON && \
+    cmake -S /tmp/abseil-cpp -B /tmp/abseil-cpp/build -DCMAKE_CXX_STANDARD=14 -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_PREFIX_PATH=/usr -DCMAKE_INSTALL_PREFIX=/usr -DABSL_ENABLE_INSTALL=ON -DABSL_USE_EXTERNAL_GOOGLETEST=ON -DABSL_FIND_GOOGLETEST=ON && \
     cmake --build /tmp/abseil-cpp/build && \
     ctest --test-dir /tmp/abseil-cpp/build && \
     cmake --build /tmp/abseil-cpp/build --target install
