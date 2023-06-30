@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3.8-slim AS builder
+FROM --platform=linux/amd64 python:3.8-slim-bullseye AS builder
 
 WORKDIR /usr/src/s2geometry
 
