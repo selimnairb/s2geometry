@@ -21,8 +21,9 @@ setuptools.setup(
                                         f"-DPython3_ROOT_DIR={Path(sys.prefix)}",
                                         '-DCALL_FROM_SETUP_PY:BOOL=ON',
                                         '-DBUILD_SHARED_LIBS:BOOL=OFF',
-                                        '-DCMAKE_CXX_STANDARD=14',
+                                        '-DCMAKE_CXX_STANDARD=17',
                                         '-DCMAKE_POSITION_INDEPENDENT_CODE=ON',
+                                        '-DBUILD_TESTS=OFF',
                                         '-DWITH_PYTHON=ON'
                                     ]
         )

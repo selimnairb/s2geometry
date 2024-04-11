@@ -27,8 +27,11 @@ $ docker compose -f docker-compose-amd64.yml run --remove-orphans s2build-amd64
 
 ### Build s2geometry wheel in s2build-amd64 container
 ```shell
-# python setup.py bdist_wheel
+# CXX=clang++ python setup.py bdist_wheel
 ```
+
+> Note: We use `clang` rather than `gcc` due to seeming bugs in the C++17 
+> implementation of GCC 12.2 under Debian 12.
 
 The resulting wheel will be in the `dist` directory of `/use/src/s2geometry` of the container,
 which is a mount of the current directory of the host.
