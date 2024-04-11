@@ -29,7 +29,9 @@ complete functionality.
 
 * [CMake](http://www.cmake.org/)
 * A C++ compiler with C++14 support, such as [g++ >= 5](https://gcc.gnu.org/)
-* [Abseil](https://github.com/abseil/abseil-cpp) (standard library extensions)
+* [Abseil](https://github.com/abseil/abseil-cpp) >= LTS
+  [`20240116`](https://github.com/abseil/abseil-cpp/releases/tag/20240116.1)
+  (standard library extensions)
 * [OpenSSL](https://github.com/openssl/openssl) (for its bignum library)
 * [googletest testing framework >= 1.10](https://github.com/google/googletest)
   (to build tests and example programs, optional)
