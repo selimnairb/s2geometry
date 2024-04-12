@@ -1,4 +1,5 @@
-FROM python:3.11-slim-bookworm AS builder
+ARG PYTHON_IMG_TAG=3.11-slim-bookworm
+FROM python:$PYTHON_IMG_TAG AS builder
 
 WORKDIR /usr/src/s2geometry
 
