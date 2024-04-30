@@ -22,6 +22,8 @@ setuptools.setup(
                                         # This option points CMake to the right Python interpreter, and helps
                                         # the logic of FindPython3.cmake to find the active version
                                         f"-DPython_LOOKUP_VERSION={PY_VERSION}",
+                                        '-DPython3_FIND_VIRTUALENV:BOOL=ON',
+                                        '-DPython3_FIND_STRATEGY=LOCATION',
                                         '-DCALL_FROM_SETUP_PY:BOOL=ON',
                                         '-DBUILD_SHARED_LIBS:BOOL=OFF',
                                         '-DCMAKE_CXX_STANDARD=17',
