@@ -4,6 +4,9 @@ from pathlib import Path
 import cmake_build_extension
 import setuptools
 
+PY_VERSION_MIN = f"{sys.version_info.major}.{sys.version_info.minor}"
+PY_VERSION_MAX = f"{sys.version_info.major}.{sys.version_info.minor+1}"
+PY_VERSION = f"{PY_VERSION_MIN}...<{PY_VERSION_MAX}"
 
 setuptools.setup(
     ext_modules=[
@@ -18,7 +21,7 @@ setuptools.setup(
             cmake_configure_options=[
                                         # This option points CMake to the right Python interpreter, and helps
                                         # the logic of FindPython3.cmake to find the active version
-                                        f"-DPython3_ROOT_DIR={Path(sys.prefix)}",
+                                        f"-DPython_LOOKUP_VERSION={PY_VERSION}",
                                         '-DCALL_FROM_SETUP_PY:BOOL=ON',
                                         '-DBUILD_SHARED_LIBS:BOOL=OFF',
                                         '-DCMAKE_CXX_STANDARD=17',
